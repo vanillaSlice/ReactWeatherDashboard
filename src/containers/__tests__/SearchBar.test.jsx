@@ -16,8 +16,7 @@ describe('search bar', () => {
   });
 
   it('fetches weather on submit', () => {
-    searchBar.find('input').get(0).value = 'liverpool';
-    searchBar.find('input').first().simulate('change');
+    searchBar.find('input').first().simulate('change', { target: { value: 'liverpool' } });
     searchBar.find('form').simulate('submit');
     expect(fetchWeather).toHaveBeenCalledWith('liverpool');
   });

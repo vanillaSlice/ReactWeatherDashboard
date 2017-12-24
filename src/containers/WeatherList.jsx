@@ -11,7 +11,7 @@ export class WeatherList extends Component {
   renderWeather() {
     return this.props.weather.map((weather) => {
       const { city, list } = weather;
-      const name = city.name;
+      const { name } = city;
       const { lat, lon } = city.coord;
       const temperatures = list.map(item => item.main.temp);
       const pressures = list.map(item => item.main.pressure);
