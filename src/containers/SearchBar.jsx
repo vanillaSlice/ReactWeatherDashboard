@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import { Button, FormControl, InputGroup } from 'react-bootstrap';
 import FontAwesome from 'react-fontawesome';
-import PropTypes from '../../node_modules/prop-types';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 import { fetchWeather } from '../actions';
 
@@ -33,16 +34,20 @@ export class SearchBar extends Component {
     return (
       <div className="SearchBar">
         <form onSubmit={this.handleSubmit}>
-          <input
-            type="text"
-            placeholder="Enter a city to view weather data for"
-            value={this.state.city}
-            onChange={this.handleInputChange}
-          />
-          <button type="submit">
-            <FontAwesome name="plus" tag="i" size="2x" />
-            <span className="sr-only">Add</span>
-          </button>
+          <InputGroup>
+            <FormControl
+              type="text"
+              placeholder="Enter a city to view weather data for"
+              value={this.state.city}
+              onChange={this.handleInputChange}
+            />
+            <InputGroup.Button>
+              <Button type="submit">
+                <FontAwesome name="plus" tag="i" />
+                <span className="sr-only">Add</span>
+              </Button>
+            </InputGroup.Button>
+          </InputGroup>
         </form>
       </div>
     );

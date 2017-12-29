@@ -1,25 +1,5 @@
-.WeatherList {
-  width: 100%;
-  margin-top: 1.5rem;
-  border-collapse: collapse;
-}
-
-.WeatherList td {
+.WeatherList th,
+.WeatherList tbody> tr > td {
   text-align: center;
   vertical-align: middle;
-}
-
-.WeatherList thead td {
-  background-color: #383838;
-  font-weight: bold;
-  padding: 0.5rem;
-}
-
-.WeatherList tbody td {
-  padding: 1rem;
-}
-
-.WeatherList tr {
-  border-bottom: 0.0625rem solid #007acc;
-  padding: 0.5rem 0;
 }

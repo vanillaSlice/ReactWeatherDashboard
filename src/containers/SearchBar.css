@@ -1,36 +1,3 @@
-.SearchBar form {
-  display: flex;
-}
-
-.SearchBar input {
-  font-family: inherit;
-  flex: 1 auto;
-  background-color: #383838;
-  border: 0.0625rem solid #007acc;
-  box-shadow: 0 0 0.625rem transparent;
-  outline: none;
-  color: inherit;
-  padding: 0.5rem;
-  margin-right: 1rem;
-}
-
-.SearchBar input:focus,
-.SearchBar input:active {
-  box-shadow: 0 0 0.625rem #007acc;
-}
-
-.SearchBar button {
-  width: 50px;
-  background-color: transparent;
-  border: none;
-  outline: none;
-  color: #adadad;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-}
-
-.SearchBar button:hover,
-.SearchBar button:focus {
-  color: #fff;
+.SearchBar {
+  margin-bottom: 20px;
 }

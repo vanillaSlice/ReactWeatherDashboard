@@ -1,6 +1,6 @@
 import React from 'react';
 import { Sparklines, SparklinesLine, SparklinesReferenceLine } from 'react-sparklines';
-import PropTypes from '../../node_modules/prop-types';
+import PropTypes from 'prop-types';
 
 import './Graph.css';
 

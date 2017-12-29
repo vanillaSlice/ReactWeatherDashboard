@@ -1,4 +1,5 @@
 import React from 'react';
+import { Navbar } from 'react-bootstrap';
 import { shallow } from 'enzyme';
 
 import App from '../App';
@@ -7,6 +8,10 @@ import WeatherList from '../../containers/WeatherList';
 
 describe('App', () => {
   const app = shallow(<App />);
+
+  it('renders navbar', () => {
+    expect(app.find(Navbar).length).toBe(1);
+  });
 
   it('renders search bar', () => {
     expect(app.find(SearchBar).length).toBe(1);

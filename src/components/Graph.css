@@ -1,11 +1,4 @@
 .Graph {
-  width: 100%;
   margin: 0 auto;
+  width: 250px;
 }
-
-@media (min-width: 62em) {
-  .Graph {
-    width: 15.625rem;
-  }
-}
-

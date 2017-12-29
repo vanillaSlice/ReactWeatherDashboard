@@ -3,7 +3,7 @@ import { mount } from 'enzyme';
 
 import { SearchBar } from '../SearchBar';
 
-describe('search bar', () => {
+describe('SearchBar', () => {
   const fetchWeather = jest.fn();
   const searchBar = mount(<SearchBar fetchWeather={fetchWeather} />);
 

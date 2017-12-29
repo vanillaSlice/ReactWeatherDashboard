@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import { Table } from 'react-bootstrap';
 import { connect } from 'react-redux';
-import PropTypes from '../../node_modules/prop-types';
+import PropTypes from 'prop-types';
 
 import GoogleMap from '../components/GoogleMap';
 import Graph from '../components/Graph';
@@ -38,19 +39,19 @@ export class WeatherList extends Component {
 
   render() {
     return (
-      <table className="WeatherList">
+      <Table className="WeatherList" striped responsive>
         <thead>
           <tr>
-            <td>City</td>
-            <td>Temperature</td>
-            <td>Pressure</td>
-            <td>Humidity</td>
+            <th>City</th>
+            <th>Temperature</th>
+            <th>Pressure</th>
+            <th>Humidity</th>
           </tr>
         </thead>
         <tbody>
           {this.renderWeather()}
         </tbody>
-      </table>
+      </Table>
     );
   }
 }

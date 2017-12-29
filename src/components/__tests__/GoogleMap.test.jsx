@@ -4,7 +4,7 @@ import GoogleMapReact from 'google-map-react';
 
 import GoogleMap from '../GoogleMap';
 
-describe('google map', () => {
+describe('GoogleMap', () => {
   const lat = 10;
   const lng = 250;
   const googleMap = shallow(<GoogleMap lat={lat} lng={lng} />);
