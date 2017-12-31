@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Table } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import _ from 'lodash';
 
 import GoogleMap from '../components/GoogleMap';
 import Graph from '../components/Graph';
@@ -15,8 +16,11 @@ export class WeatherList extends Component {
       const { name } = city;
       const { lat, lon } = city.coord;
       const temperatures = list.map(item => item.main.temp);
+      const avgTemperature = _.round(_.mean(temperatures), 2);
       const pressures = list.map(item => item.main.pressure);
+      const avgPressure = _.round(_.mean(pressures), 2);
       const humidities = list.map(item => item.main.humidity);
+      const avgHumidity = _.round(_.mean(humidities), 2);
 
       return (
         <tr key={name}>
@@ -25,12 +29,15 @@ export class WeatherList extends Component {
           </td>
           <td>
             <Graph data={temperatures} colour="#4ec9b0" />
+            <span className="average">avg - {avgTemperature}&deg;F</span>
           </td>
           <td>
             <Graph data={pressures} colour="#ce8c55" />
+            <span className="average">avg - {avgPressure}mbar</span>
           </td>
           <td>
             <Graph data={humidities} colour="#9cdcf7" />
+            <span className="average">avg - {avgHumidity}%</span>
           </td>
         </tr>
       );
@@ -43,9 +50,9 @@ export class WeatherList extends Component {
         <thead>
           <tr>
             <th>City</th>
-            <th>Temperature</th>
-            <th>Pressure</th>
-            <th>Humidity</th>
+            <th>Temperature (&deg;F)</th>
+            <th>Pressure (mbar)</th>
+            <th>Humidity (%)</th>
           </tr>
         </thead>
         <tbody>
