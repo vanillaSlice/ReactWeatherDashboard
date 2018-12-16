@@ -4,10 +4,12 @@ branches:
     - master
 node_js:
   - stable
-cache: yarn
+cache: npm
 script:
-  - yarn test
-  - yarn build
+  - npm test
+  - if [[ $TRAVIS_BRANCH = 'master' && $TRAVIS_PULL_REQUEST = 'false' ]]; then npm run build; fi
+after_script:
+  - npm run coveralls
 deploy:
   provider: pages
   skip_cleanup: true

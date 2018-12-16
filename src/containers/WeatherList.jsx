@@ -11,8 +11,9 @@ import './WeatherList.css';
 
 export class WeatherList extends Component {
   renderWeather() {
-    return this.props.weather.map((weather) => {
-      const { city, list } = weather;
+    const { weather } = this.props;
+    return weather.map((w) => {
+      const { city, list } = w;
       const { name } = city;
       const { lat, lon } = city.coord;
       const temperatures = list.map(item => item.main.temp);
@@ -29,15 +30,27 @@ export class WeatherList extends Component {
           </td>
           <td>
             <Graph data={temperatures} colour="#4ec9b0" />
-            <span className="average">avg - {avgTemperature}&deg;F</span>
+            <span className="average">
+              avg -
+              {avgTemperature}
+              &deg;F
+            </span>
           </td>
           <td>
             <Graph data={pressures} colour="#ce8c55" />
-            <span className="average">avg - {avgPressure}mbar</span>
+            <span className="average">
+              avg -
+              {avgPressure}
+              mbar
+            </span>
           </td>
           <td>
             <Graph data={humidities} colour="#9cdcf7" />
-            <span className="average">avg - {avgHumidity}%</span>
+            <span className="average">
+              avg -
+              {avgHumidity}
+              %
+            </span>
           </td>
         </tr>
       );

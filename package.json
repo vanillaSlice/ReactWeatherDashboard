@@ -1,46 +1,87 @@
 {
   "name": "react-weather-dashboard",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "axios": "^0.17.1",
-    "bootstrap": "3",
-    "enzyme": "^3.2.0",
-    "enzyme-adapter-react-16": "^1.1.1",
-    "font-awesome": "^4.7.0",
-    "google-map-react": "^0.26.0",
-    "loadash": "^1.0.0",
-    "lodash": "^4.17.4",
-    "prop-types": "^15.6.0",
-    "react": "^16.2.0",
-    "react-bootstrap": "^0.31.5",
-    "react-dom": "^16.2.0",
-    "react-fontawesome": "^1.6.1",
-    "react-redux": "^5.0.6",
-    "react-scripts": "^1.0.17",
-    "react-sparklines": "^1.7.0",
-    "redux": "^3.7.2",
-    "redux-promise": "^0.5.3"
+  "version": "1.0.0",
+  "description": "React Weather Dashboard",
+  "keywords": [
+    "dashboard",
+    "weather"
+  ],
+  "homepage": "https://vanillaslice.github.io/ReactWeatherDashboard/",
+  "bugs": {
+    "url": "https://github.com/vanillaSlice/ReactWeatherDashboard/issues",
+    "email": "mikelowedev@gmail.com"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Mike Lowe",
+    "email": "mikelowedev@gmail.com",
+    "url": "https://www.mikelowe.xyz/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vanillaSlice/ReactWeatherDashboard.git"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test:lint:js": "eslint --ext=js --ext=jsx ./src",
-    "test:lint:css": "stylelint './src/**/*.css'",
-    "test:unit": "react-scripts test --env=jsdom",
-    "test": "run-s test:**",
+    "test": "run-s test:lint test:unit",
+    "test:lint": "run-s test:lint:js test:lint:css",
+    "test:lint:js": "eslint --ext=js --ext=jsx src/",
+    "test:lint:css": "stylelint src/**/*.css",
+    "test:unit": "react-scripts test --env=jsdom --coverage --colors",
+    "coveralls": "cat coverage/lcov.info | node node_modules/.bin/coveralls",
     "eject": "react-scripts eject"
   },
-  "homepage": "https://vanillaslice.github.io/ReactWeatherDashboard/",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "bootstrap": "^3.3.7",
+    "enzyme": "^3.8.0",
+    "enzyme-adapter-react-16": "^1.7.1",
+    "font-awesome": "^4.7.0",
+    "google-map-react": "^1.1.1",
+    "lodash": "^4.17.11",
+    "prop-types": "^15.6.2",
+    "react": "^16.6.3",
+    "react-bootstrap": "^0.32.4",
+    "react-dom": "^16.6.3",
+    "react-fontawesome": "^1.6.1",
+    "react-redux": "^6.0.0",
+    "react-scripts": "2.1.1",
+    "react-sparklines": "^1.7.0",
+    "redux": "^4.0.1",
+    "redux-promise": "^0.6.0"
+  },
   "devDependencies": {
-    "eslint": "^4.14.0",
-    "eslint-config-airbnb": "^16.1.0",
-    "eslint-plugin-import": "^2.8.0",
-    "eslint-plugin-jsx-a11y": "^6.0.3",
-    "eslint-plugin-react": "^7.5.1",
-    "npm-run-all": "^4.1.2",
-    "react-test-renderer": "^16.2.0",
-    "stylelint": "^8.4.0",
-    "stylelint-config-standard": "^18.0.0"
+    "coveralls": "^3.0.2",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.11.1",
+    "npm-run-all": "^4.1.5",
+    "react-test-renderer": "^16.6.3",
+    "stylelint": "^9.9.0",
+    "stylelint-config-standard": "^18.2.0"
+  },
+  "private": true,
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.jsx",
+      "src/**/*.js",
+      "!src/*.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 85,
+        "functions": 85,
+        "lines": 85,
+        "statements": 85
+      }
+    }
   }
 }
