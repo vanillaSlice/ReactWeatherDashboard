@@ -5,21 +5,50 @@
 [![Coverage Status](https://img.shields.io/coveralls/github/vanillaSlice/ReactWeatherDashboard/master.svg)](https://coveralls.io/github/vanillaSlice/ReactWeatherDashboard?branch=master)
 [![License](https://img.shields.io/github/license/vanillaSlice/ReactWeatherDashboard.svg)](LICENSE)
 
-A simple weather dashboard written using React and Redux. A working version can be viewed [here](https://vanillaslice.github.io/ReactWeatherDashboard/).
+A simple weather dashboard written using [React](https://reactjs.org/) and [Redux](https://redux.js.org/). 
+A deployed version can be viewed [here](https://vanillaslice.github.io/ReactWeatherDashboard/).
 
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+## Screenshot
 
-## Installing dependencies
+![Screenshot](/images/screenshot-1.png)
+
+## Getting Started
+
+### Prerequisites
+
+* [Node.js](https://nodejs.org/en/)
+
+### Installing Dependencies
+
+From your terminal/command prompt run:
+
 ```
-yarn install
+npm install
 ```
 
-## Running locally
+### Running
+
+From your terminal/command prompt run:
+
 ```
-yarn start
+npm start
 ```
 
-## Run tests
-```
-yarn test
-```
+This will run the development server on [localhost:3000](http://localhost:3000).
+
+## Technology Used
+
+For those of you that are interested, the technology used in this project includes:
+
+* [React](https://reactjs.org/)
+* [Redux](https://redux.js.org/)
+
+## Useful Links
+
+Resources useful for the completion of this project:
+
+* [Create React App](https://github.com/facebook/create-react-app) (React starter kit)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
