@@ -1,5 +1,6 @@
 {
   "name": "React Weather Dashboard",
+  "short_name": "React Weather Dashboard",
   "icons": [{
       "src": "./android-chrome-192x192.png",
       "sizes": "192x192",

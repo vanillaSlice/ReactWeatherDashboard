@@ -5,9 +5,9 @@ import { Sparklines, SparklinesLine, SparklinesReferenceLine } from 'react-spark
 import Graph from '../Graph';
 
 describe('graph', () => {
-  const data = [1, 2, 3, 4, 5];
   const colour = 'green';
-  const graph = shallow(<Graph data={data} colour={colour} />);
+  const data = [1, 2, 3, 4, 5];
+  const graph = shallow(<Graph colour={colour} data={data} />);
 
   it('renders sparklines with data', () => {
     expect(graph.find(Sparklines).props().data).toEqual(data);

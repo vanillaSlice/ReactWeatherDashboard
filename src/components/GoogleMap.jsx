@@ -6,19 +6,19 @@ const API_KEY = 'AIzaSyAXyEamwfpKmQvyDlV0OXVGFV9Fhw8rSi4';
 
 const defaultZoom = 10;
 const style = {
-  width: '125px',
-  height: '125px',
-  position: 'relative',
+  height: '7.8125rem',
   margin: '0 auto',
   padding: 0,
+  position: 'relative',
+  width: '7.8125rem',
 };
 
 const GoogleMap = ({ lat, lng }) => (
   <GoogleMapReact
     bootstrapURLKeys={{ key: API_KEY }}
     center={{ lat, lng }}
-    zoom={defaultZoom}
     style={style}
+    zoom={defaultZoom}
   />
 );
 

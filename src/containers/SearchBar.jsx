@@ -1,5 +1,11 @@
 import React, { Component } from 'react';
-import { Button, FormControl, InputGroup } from 'react-bootstrap';
+import {
+  Button,
+  Form,
+  Input,
+  InputGroup,
+  InputGroupAddon,
+} from 'reactstrap';
 import FontAwesome from 'react-fontawesome';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
@@ -38,22 +44,22 @@ export class SearchBar extends Component {
 
     return (
       <div className="SearchBar">
-        <form onSubmit={this.handleSubmit}>
+        <Form onSubmit={this.handleSubmit}>
           <InputGroup>
-            <FormControl
+            <Input
               type="text"
               placeholder="Enter a city to view weather data for"
               value={city}
               onChange={this.handleInputChange}
             />
-            <InputGroup.Button>
+            <InputGroupAddon addonType="append">
               <Button type="submit">
                 <FontAwesome name="plus" tag="i" />
                 <span className="sr-only">Add</span>
               </Button>
-            </InputGroup.Button>
+            </InputGroupAddon>
           </InputGroup>
-        </form>
+        </Form>
       </div>
     );
   }
