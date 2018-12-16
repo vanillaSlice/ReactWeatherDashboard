@@ -1,16 +1,17 @@
 language: node_js
+branches:
+  only:
+    - master
 node_js:
-  - "stable"
-cache:
-  directories:
-  - node_modules
+  - stable
+cache: yarn
 script:
   - yarn test
   - yarn build
 deploy:
   provider: pages
   skip_cleanup: true
-  github_token: $github_token
+  github_token: $GITHUB_TOKEN
   local_dir: build
   on:
     branch: master
