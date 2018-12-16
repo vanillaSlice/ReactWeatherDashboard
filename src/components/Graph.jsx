@@ -4,17 +4,20 @@ import PropTypes from 'prop-types';
 
 import './Graph.css';
 
-const Graph = props => (
-  <div className="Graph">
-    <Sparklines data={props.data}>
-      <SparklinesLine color={props.colour} />
-      <SparklinesReferenceLine
-        type="mean"
-        style={{ stroke: '#f44747', strokeOpacity: 0.75, strokeDasharray: '2, 2' }}
-      />
-    </Sparklines>
-  </div>
-);
+const Graph = (props) => {
+  const { data, colour } = props;
+  return (
+    <div className="Graph">
+      <Sparklines data={data}>
+        <SparklinesLine color={colour} />
+        <SparklinesReferenceLine
+          type="mean"
+          style={{ stroke: '#f44747', strokeOpacity: 0.75, strokeDasharray: '2, 2' }}
+        />
+      </Sparklines>
+    </div>
+  );
+};
 
 Graph.propTypes = {
   data: PropTypes.arrayOf(PropTypes.number).isRequired,

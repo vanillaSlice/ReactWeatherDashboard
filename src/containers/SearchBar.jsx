@@ -21,7 +21,10 @@ export class SearchBar extends Component {
   handleSubmit(event) {
     event.preventDefault();
 
-    this.props.fetchWeather(this.state.city);
+    const { fetchWeather: fw } = this.props;
+    const { city } = this.state;
+
+    fw(city);
 
     this.setState({ city: '' });
   }
@@ -31,6 +34,8 @@ export class SearchBar extends Component {
   }
 
   render() {
+    const { city } = this.state;
+
     return (
       <div className="SearchBar">
         <form onSubmit={this.handleSubmit}>
@@ -38,7 +43,7 @@ export class SearchBar extends Component {
             <FormControl
               type="text"
               placeholder="Enter a city to view weather data for"
-              value={this.state.city}
+              value={city}
               onChange={this.handleInputChange}
             />
             <InputGroup.Button>
