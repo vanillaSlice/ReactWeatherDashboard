@@ -7,7 +7,9 @@ node_js:
 cache: yarn
 script:
   - yarn test
-  - yarn build
+  - if [ $TRAVIS_BRANCH = 'master' ]; then yarn build; fi
+after_script:
+  - npm run coveralls
 deploy:
   provider: pages
   skip_cleanup: true
