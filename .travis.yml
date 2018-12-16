@@ -7,7 +7,7 @@ node_js:
 cache: npm
 script:
   - npm test
-  - test $TRAVIS_BRANCH = 'master' && test $TRAVIS_PULL_REQUEST_BRANCH = '' && npm run build
+  - if [[ $TRAVIS_BRANCH = 'master' && $TRAVIS_PULL_REQUEST = 'false' ]]; then npm run build; fi
 after_script:
   - npm run coveralls
 deploy:
