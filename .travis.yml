@@ -6,7 +6,7 @@ node_js:
   - stable
 cache: npm
 script:
-  - npm test
+  - npm run test
   - if [[ $TRAVIS_BRANCH = 'master' && $TRAVIS_PULL_REQUEST = 'false' ]]; then npm run build; fi
 after_script:
   - npm run coveralls

@@ -5,14 +5,14 @@ import PropTypes from 'prop-types';
 import './Graph.css';
 
 const Graph = (props) => {
-  const { data, colour } = props;
+  const { colour, data } = props;
   return (
     <div className="Graph">
       <Sparklines data={data}>
         <SparklinesLine color={colour} />
         <SparklinesReferenceLine
+          style={{ stroke: '#f44747', strokeDasharray: '2, 2', strokeOpacity: 0.75 }}
           type="mean"
-          style={{ stroke: '#f44747', strokeOpacity: 0.75, strokeDasharray: '2, 2' }}
         />
       </Sparklines>
     </div>
@@ -20,8 +20,8 @@ const Graph = (props) => {
 };
 
 Graph.propTypes = {
-  data: PropTypes.arrayOf(PropTypes.number).isRequired,
   colour: PropTypes.string.isRequired,
+  data: PropTypes.arrayOf(PropTypes.number).isRequired,
 };
 
 export default Graph;

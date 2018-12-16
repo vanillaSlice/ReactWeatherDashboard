@@ -9,12 +9,9 @@ import '../node_modules/font-awesome/css/font-awesome.min.css';
 
 import App from './components/App';
 import reducers from './reducers';
-import registerServiceWorker from './registerServiceWorker';
 
 const store = createStore(reducers, applyMiddleware(promiseMiddleware));
-const RootElement = document.getElementById('root');
+const rootElement = document.getElementById('root');
 const ProviderElement = createElement(Provider, { store }, createElement(App));
 
-render(ProviderElement, RootElement);
-
-registerServiceWorker();
+render(ProviderElement, rootElement);
