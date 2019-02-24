@@ -1,14 +1,5 @@
-# macOS
 .DS_Store
-
-# VSCode
 .vscode
-
-# Build Artifacts
 build
-
-# npm
-node_modules
-
-# Coverage
 coverage
+node_modules

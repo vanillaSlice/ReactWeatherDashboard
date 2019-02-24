@@ -16,7 +16,7 @@ A deployed version can be viewed [here](https://vanillaslice.github.io/ReactWeat
 
 ### Prerequisites
 
-* [Node.js](https://nodejs.org/en/)
+* [npm](https://www.npmjs.com/)
 
 ### Installing Dependencies
 
@@ -34,14 +34,16 @@ From your terminal/command prompt run:
 npm start
 ```
 
-This will run the development server on [localhost:3000](http://localhost:3000).
+Point your browser to [localhost:3000](http://localhost:3000).
 
 ## Technology Used
 
 For those of you that are interested, the technology used in this project includes:
 
+* [Bootstrap 4](https://getbootstrap.com/docs/4.0/getting-started/introduction/)
 * [React](https://reactjs.org/)
 * [Redux](https://redux.js.org/)
+* [Jest](https://jestjs.io/) (Testing)
 
 ## Useful Links
 
