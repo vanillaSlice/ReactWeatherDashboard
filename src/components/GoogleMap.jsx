@@ -2,8 +2,6 @@ import React from 'react';
 import GoogleMapReact from 'google-map-react';
 import PropTypes from 'prop-types';
 
-const API_KEY = 'AIzaSyAXyEamwfpKmQvyDlV0OXVGFV9Fhw8rSi4';
-
 const defaultZoom = 10;
 const style = {
   height: '7.8125rem',
@@ -15,7 +13,7 @@ const style = {
 
 const GoogleMap = ({ lat, lng }) => (
   <GoogleMapReact
-    bootstrapURLKeys={{ key: API_KEY }}
+    bootstrapURLKeys={{ key: process.env.REACT_APP_API_KEY }}
     center={{ lat, lng }}
     style={style}
     zoom={defaultZoom}
