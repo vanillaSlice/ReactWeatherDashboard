@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Navbar, NavbarBrand } from 'reactstrap';
 
+import AppFooter from './AppFooter';
 import SearchBar from '../containers/SearchBar';
 import WeatherList from '../containers/WeatherList';
 
@@ -17,5 +18,6 @@ export default () => (
       <SearchBar />
       <WeatherList />
     </Container>
+    <AppFooter />
   </div>
 );
