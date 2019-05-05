@@ -18,6 +18,21 @@ A deployed version can be viewed [here](http://reactweatherdashboard.mikelowe.xy
 
 * [npm](https://www.npmjs.com/)
 
+### API Keys
+
+Create a copy of the file `.env.local-example` and call it `.env.local`. We'll add the API keys to this file.
+
+#### OpenWeatherMap API Key
+
+This app requires an API key for OpenWeatherMap. Go [here](https://openweathermap.org/) to find out how to get one.
+Set the `REACT_APP_OPEN_WEATHER_MAP_API_KEY` variable in `.env.local`.
+
+#### Google Maps API Key
+
+This app requires an API key for the Google Maps JavaScript API. Go
+[here](https://developers.google.com/maps/documentation/javascript/get-api-key) to find out how to get one.
+Set the `REACT_APP_GOOGLE_MAPS_API_KEY` variable in `.env.local`.
+
 ### Installing Dependencies
 
 From your terminal/command prompt run:
@@ -50,6 +65,9 @@ For those of you that are interested, the technology used in this project includ
 Resources useful for the completion of this project:
 
 * [Create React App](https://github.com/facebook/create-react-app) (React starter kit)
+* [OpenWeatherMap](https://openweathermap.org/) (used for weather data)
+* [Google Maps JavaScript API](https://developers.google.com/maps/documentation/javascript/get-api-key)
+(used for displaying maps)
 
 ## License
 
