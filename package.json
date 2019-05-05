@@ -7,7 +7,7 @@
     "react",
     "redux"
   ],
-  "homepage": "http://reactweatherdashboard.mikelowe.xyz/",
+  "homepage": "https://reactweatherdashboard.mikelowe.xyz/",
   "bugs": {
     "url": "https://github.com/vanillaSlice/ReactWeatherDashboard/issues",
     "email": "mikelowedev@gmail.com"
