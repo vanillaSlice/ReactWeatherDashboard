@@ -5,8 +5,8 @@
 [![Coverage Status](https://img.shields.io/coveralls/github/vanillaSlice/ReactWeatherDashboard/master.svg)](https://coveralls.io/github/vanillaSlice/ReactWeatherDashboard?branch=master)
 [![License](https://img.shields.io/github/license/vanillaSlice/ReactWeatherDashboard.svg)](LICENSE)
 
-A simple weather dashboard written using [React](https://reactjs.org/) and [Redux](https://redux.js.org/). 
-A deployed version can be viewed [here](https://vanillaslice.github.io/ReactWeatherDashboard/).
+A simple weather dashboard written using [React](https://reactjs.org/) and [Redux](https://redux.js.org/).
+A deployed version can be viewed [here](http://reactweatherdashboard.mikelowe.xyz/).
 
 ## Screenshot
 
