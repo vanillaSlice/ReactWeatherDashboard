@@ -1,7 +1,7 @@
 # React Weather Dashboard
 
 [![Latest Release](https://img.shields.io/github/release/vanillaSlice/ReactWeatherDashboard.svg)](https://github.com/vanillaSlice/ReactWeatherDashboard/releases/latest)
-[![Build Status](https://img.shields.io/travis/vanillaSlice/ReactWeatherDashboard/master.svg)](https://travis-ci.org/vanillaSlice/ReactWeatherDashboard)
+[![Build Status](https://img.shields.io/travis/com/vanillaSlice/ReactWeatherDashboard/master.svg)](https://travis-ci.com/vanillaSlice/ReactWeatherDashboard)
 [![Coverage Status](https://img.shields.io/coveralls/github/vanillaSlice/ReactWeatherDashboard/master.svg)](https://coveralls.io/github/vanillaSlice/ReactWeatherDashboard?branch=master)
 [![License](https://img.shields.io/github/license/vanillaSlice/ReactWeatherDashboard.svg)](LICENSE)
 
